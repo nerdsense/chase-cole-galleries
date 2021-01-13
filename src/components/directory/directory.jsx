@@ -26,12 +26,14 @@ class Directory extends React.Component {
             {
                 title: 'BOB TIMBERLAKE',
                 imageUrl: 'https://www.theribboninmyjournal.com/wp-content/uploads/2014/11/BobTimberlake_1.jpg',
-                id: 4
+                id: 4,
+                size: 'large'
             },
             {
                 title: 'NEW ITEMS',
                 imageUrl: 'http://britishcottageblog.com/wp-content/uploads/2016/08/IMG_0545-768x534.jpg',
-                id: 5
+                id: 5,
+                size: 'large'
             }
             ]
         }
@@ -41,8 +43,8 @@ class Directory extends React.Component {
         return (
             <div className='directory-menu'>
                 {
-                    this.state.sections.map(({title, imageUrl, id}) => (
-                        <MenuItem key={id} title={title} imageUrl={imageUrl} />
+                    this.state.sections.map(({ title, imageUrl, id, size }) => (
+                        <MenuItem key={id} title={title} imageUrl={imageUrl} size={size} />
                     ))
                 }
             </div>
